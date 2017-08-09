@@ -1,0 +1,27 @@
+COHORT ANALYSIS 
+
+- A cohort is a group of people.
+
+- For Udemy's sake, a group of people who became a customer or joined 
+	an organization around the same time. 
+
+*** A cohort analysis is an comparison of different groups of people
+	to each other?
+
+- Cohorts are generally measured against each other over two metrics. 
+
+- Cohort Analysis is used to 
+
+*** Acquisition means getting new users. 
+
+- Retention means getting people to come back.  
+
+- In a business, you want to acquisition and retention, i.e. getting 
+	new customers and getting them to come back. 
+	
+- Cohort analysis is very good tracking retention, i.e, figuring 
+	out if people come back. 
+	
+- Cohort analysis is also good at figuring out way to retain customers. 
+
+- RPU is an acronym for "Revenue Per User"

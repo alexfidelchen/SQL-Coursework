@@ -1,0 +1,47 @@
+SQL JOINING TABLES
+
+- Suppose we have two tables: Active Customers and Reward Customers. 
+	- Active Customers has the columns customer_id and fav_color while 
+	Reward Customers has columns customer_id and num_purchases (number
+	of purchases. You can cannot combine the two tables by the customer_id 
+	column. 
+	
+- You can also connect tables together using the JOIN clause. 	
+*** The JOIN clause connects two tables together by connecting
+	a column from each table together. When you connect two columns
+	together, a new column is made. 
+		Syntax:
+			SELECT [tableName.column1], [tableName.column2],... [tableName.columnX]
+			FROM [table1] 
+			[Join type] [table2] ON [column1] = [column2]
+		
+*** When you connect two tables together using JOIN, ALL ELEMENTS, FROM 
+	BOTH TABLES, ARE COMBINED. However, only mutual elements will be included
+	in the new table. Elements in one table but not the other WILL BE THROWN OUT.
+	To avoid this, use another type of join. 
+	
+	- When you connect tables together using LEFT JOIN, all the elements 
+	in the left table will be in the new column, left and right column determined
+	by its side of the JOIN clause. 
+	
+		*** Assuming not the left and right columns do not have all the same elements, 
+		the new column will have elements which  are not associated with elements
+		in other columns, so some of the new column's elements will be associated with NULL. 
+	
+		- LEFT JOIN is helpful when you want to determine which users 
+		have spent money on their accounts and which have not. 
+		- ON is a clause?
+		
+*** If you chain multiple JOIN clauses in FROM, the tables are connected
+	sequentailly (in order), a table joins with table from first JOIN, then
+	the table from the second JOIN. 
+	
+- You do NOT have connect two tables together by the existing columns, 
+	you may also connect two tables together by created columns from 
+	one table. So instead of connecting a table by table.test1, you can 
+	connect to table one by left(table.test1,7). 
+
+*** You can connect two tables together by ANY columns from each table. 
+	They do NOT have to have the same name. Just be aware that if the 
+	two columns don't have many mutual elements, your column is going to 
+	be a lot smaller. 

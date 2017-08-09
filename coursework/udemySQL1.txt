@@ -1,0 +1,11 @@
+UDEMY NOTES SQL BEGINNERS COURSE
+
+- For the next two weeks, watch at least 30 seconds a day. 
+
+- Root Password: Cristal0804
+
+- Download the data files. 
+
+- So you can install SQL files. 
+
+- You can write SQL queries in a command line. 

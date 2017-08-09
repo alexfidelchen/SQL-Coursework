@@ -1,0 +1,28 @@
+SQL TEMPORARY TABLES 
+
+*** A temporary table is a table created by the user. Temporary tables allow
+	you to create tables with the information you want and query off of it. 
+	
+- Notice that when you query a database you create a table. That table is 
+	a temporary table. You can save that temporary table using the following 
+	syntax.
+		- syntax: drop temporary table if exists [temporary table name];
+		(DON'T FORGET THE SEMICOLON)
+			create temporary table [temp table name]
+			SELECT 
+			FROM 
+			WHERE
+			
+		- You only need to include the drop table statement if you ran 
+		the SELECT FORM WHERE query already. 
+		
+- If you're using temporary tables, make sure your column nicknames are 
+	single words because column nicknames have to be single words for you 
+	to reference them. 
+	
+- You can still refer to your columns using the original name.
+
+- To decide to give a nickname to your column, it shouldn't be the same
+	name as your table.  
+
+*** Temporary tables are deleted when you close HeidiSQL. 

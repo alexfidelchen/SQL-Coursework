@@ -1,0 +1,193 @@
+SQL NOTES 
+
+FOUNDATIONS 
+*** SQL is short for Strutured Query Language. 
+
+*** SQL makes it easy to return elements with specific conditions, 
+	and do something to them. 
+
+*** A query is a request for information from a database. 
+
+*** You use SQL to query and get information from a database. 
+
+*** A query language is a computer language used to retrieve 
+	information from a database. 
+	
+*** The server administrator is called "root". The password 
+	to "root" is the "root" password.
+	
+- SQL statements seem to read like English. 
+	
+- Excel Spreadsheet. 
+
+*** SQL files consist of tables. Tables are like spreadsheets.
+	There can be multiple tables in a SQL file. Within a table are
+	columns and rows. Columns are generally catagories (Name, Age,
+	Birthday) while a row is all the cells that fill those catagories combined.
+	A field is a cell in the table, found by intersecting a row and a
+	column. The number of fields in a table is number of columns * 
+	number of rows. So for example, if a table has has 2 columns and 3 rows, 
+	the table has 6 fields. 
+	
+- Tables in SQL are generally broken up into major catagories (city,
+	payment, actor, etc..). But they are generally related in 
+	some way. 
+	
+*** Each element in an SQL element has a unique id, so you don't
+	get names confused. It's also a way for tables relate to each
+	other. 
+		- For example, suppose we make a table connecting actors 
+			to their films. One fast and efficient way to do that
+			is to make the columns actor ID and film ID on the 
+			same table. 
+	
+- Note that row IDs start at 1. 
+
+- You use SQL to make queries. Remember, a query is a request 
+	for information. 
+	
+- When you write a SQL query, you will always use a these words:
+	
+	*** The SELECT action selects data from a database. You 
+		can use SELECT to select columns (catagories) within 
+		a table and functions in a database. You 
+	*** The FROM action selects which table to select from.
+	*** WHERE selects rows (elements) returned by SELECT that 
+		fit the set conditions.
+		
+	syntax: 
+		SELECT [Desired column1], [Desired column2],... [Desired columnX]
+		FROM [Desired table]
+		WHERE
+		;
+	- The semicolon signifies that the end of your query statement.
+- To select everything, use "*". 
+	
+- You can make comments in SQL by starting the line with a hashtag.
+- You can make an in-line comment using "--" followed by your comment. 
+	The in-line comment only lasts one line. 
+
+*** SQL is NOT case-sensitive. 
+
+*** There's a difference between a row and an element. An element is a 
+	cell in a column. A row is a row of corresponding cells from all 
+	columns. 
+	
+- You may run multiple query statements at once in HeidiSQL
+
+NOTES
+- So you can install SQL files. 
+
+- You can write SQL queries (requests for info) in a command line, 
+	but it would look cleaner if we used a user interface. 
+	
+- Once you're in the interface, most of your work will be done 
+	here.
+	
+- To run the SQL query, press fn + f9
+
+- You can extract SQL data into CSV files. 
+
+- For WHERE you can choose from different catagories than the ones
+	you chose from select. 
+	
+- If you set a table's column equal to itself in where an infinite 
+	loop is created and the query is will not finish executing. 
+	
+- It appears that SQL returns columns in the order that they 
+	are called. So it doesn't matter the order you call the columns
+	in. It doesn't have to be in the order the table is in. 
+	
+- A record is an informal name for a row. 
+
+FUNCTIONS 
+- Like Java or JavaScript, SQL has functions too. 
+*** The count() function counts returns the number of elements in the
+	column (catagory) with the specific WHERE criteria. If thereSo
+	is no WHERE, then count() returns all elements in a column 
+	(catagory). So for example, 
+	SELECT count(title)
+	FROM film
+	WHERE rental_rate = .99
+	;
+	count() counts the number of elements in the title catagory which
+	have a rental_rate of 0.99. 
+	
+- Elements in a column are grouped by their values.   
+	(A elements go in the A group, B elements in the B group). 
+	
+*** The GROUP BY clause groups all data in SELECT action. 
+	If group by groups a catagory, group by returns the first 
+	element of each group. First element of each group is element
+	with the lowest ID.
+	syntax: group by [catagory you want to group by]
+	
+	- You can group by multiple catagories. If you use group by 
+	with multiple catagories, the SELECT data will first be 
+	grouped by first catagory, then the second catagory, then
+	the third catagory, etc...
+	
+- If group by is grouping count(), group by splits the 
+	the number of elements into their respective groups. The 
+	group is determined by the column name after group by. 
+	Depending on the group, elements may be part of more than 
+	one group. 
+	
+- You don't have to group by columns or functions in the SELECT 
+	CLAUSE, you can choose any column from tables in the FROM 
+	CLAUSE. 
+	
+- Remember, just because you group by a column, will NOT make the column 
+	appear in the query. 
+	
+- Instead of selecting a group by catagory by name, you can a catagory
+	by it's SELECT index number. Say you want to group by the second
+	element in SELECT, then you would say "group by 2". If you select
+	a function like count() using SELECT index number, you'll get an error.
+	
+	- It's good to select a column in GROUP BY it's select index number
+	if the column name is too long. Another way to avoid writing a long 
+	name in GROUP BY is to use the column's nickname if you gave it one. 
+
+- SQL has AND, OR and NOT operators. They are used to connect expressions
+		together. AND, OR and NOT are not clauses so they are not capitalized. 
+
+*** It's a good habit to use dot notation for all data in the SELECT
+	clause, just so you can avoid column conflicts if you add more 
+	tables. 
+- To select all elements from a table with dot notation, use 
+	[column name].*
+	
+- If you use GROUP BY and select all (*) together, GROUP BY groups by 
+	the first column in the table?
+	
+	
+OPERATORS 
+- What if you only wanted to work with specific elements in a column?
+- The "in" operator simplifies a column so it only has elements inside 
+	the in() operator. 
+	syntax: in([element1], [element2]...[elementX]);
+	
+*** The in operator simplifies a column to only specific elements. 
+
+- Recall that comparison operators are symbols that compare two 
+	expressions. Symbols like =, >, <, <=, != (Not equal to), 
+	<> (Also not equal to). 
+	
+	- You can use comparison operators to shorten your column to 
+	specific characters, just like "in". 
+	
+	- table1.testColumn1 != "Meat" returns all elements in testColumn1
+	that is NOT Meat. 
+	
+	- table1Column1 > "Meat" returns all in testColumn1 that's AFTER Meat. 
+	
+	- Interesting, Facebook found out that if you have 7 Facebook friends 
+	on FB, you'll likely to use it alot. 
+
+	- Interesting, the "between" operator allows you to simplify a column 
+	into elements between two elements. The starting and ending elements 
+	are included in the column. 
+	syntax: WHERE [column name] between "[element1]" and "[element2]"
+	- You do NOT need to write the entire element, just the first string. 
+	

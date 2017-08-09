@@ -1,0 +1,35 @@
+SQL FUNCTIONS 
+ 
+	
+*** The LEFT() function shortens a column's elements to a certain
+	number of characters, starting from the left. 
+	syntax: left([column you want shortened elements in], 
+	[number of characters you want to shorten the element to])
+	
+	- The LEFT() function allows you to shorten elements so 
+	organize them into more general groups. Good to use when 
+	you want to group rentals by month, your data has month, 
+	year and day. 
+	
+- The MIN() function gives you the row's smallest or earliest element
+	in a column. As expected, the MAX() function gives the largest or latest element 
+	in a column. If used with group by, MIN() and MAX() finds the smallest 
+	or largest elements in their group. 
+	
+- The DISTINCT keyword returns column's elements such that no 
+	element repeats itself. 
+
+- DATEDIFF() returns the number of days between one date to the 
+	other. DATEDIFF() includes ending day, but not the beginning
+	day. DATEDIFF() only available in MySQL.
+	
+- PERIOD_DIFF returns the months between one month to another. 
+	Last month is included. Again, only available in MySQL. 
+		- syntax: SELECT PERIOD_DIFF(YYMM, YYMM). YY is short for 
+		the year in two numbers. MM is short for the month in two 
+		numbers. 
+		
+- DATE_FORMAT() formats a date so it can be used in DATEDIFF() or 
+	PERIOD_DIFF().
+		- syntax: DATE_FORMAT(date,format). See MySQL Date and 
+		Time Functions documentation for details. 

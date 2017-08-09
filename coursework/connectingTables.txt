@@ -1,0 +1,50 @@
+SQL CONNECTING TABLES
+
+- What if you wanted to get information from two different tables. 
+
+- When you're dealing with multiple tables, you have to
+	to specify which table a catagory is from. You do this with
+	dot notation. 
+	
+*** You can connect two tables together by connecting two columns
+		the tables have in common. To do this, you can either use
+		the JOIN clause (action) or use the WHERE clause and set
+		the mutual catagories together. 
+		
+*** Note that all when connect two columns together, only the 
+	mutual elements are in the column. Elements that belong to 
+	one column but not the other GET THROWN OUT. This could happen
+	if one column had more ids than the other. 
+
+- You use the AND clause to connect two expressions together?
+
+-  To connect two categories together, use the WHERE clause, 
+	as expected, then the AND clause. 
+	syntax: WHERE [first connector] AND [second connector]
+	
+- To reference catagories in SELECT and WHERE, you have to 
+	reference them in FROM. 
+	
+- If you want to use a catagory in SELECT and WHERE, that 
+	catagory's table has to be in the FROM clause. 
+	
+- WHERE's expressions do NOT need to be all on one line. 
+
+*** The expressions can get really long so you can set the tables 
+	to variables shorten the expresions. To set a variable to a
+	table,write the table name then set the variable you want to 
+	set it to immediately after it. You do NOT need to declare the 
+	variable before using it. 
+	syntax: [table name] [variable name]
+	It's recommended to use a one or two letter variable. 
+	
+
+*** If you set the table to a variable, you have to use the variable
+	throughout the SQL file, you CANNOT use the actual table name 
+	again. 
+	
+- If a column name is unique, you don't have to specify which 
+	table it's from. 
+	
+*** It makes how which columns you connect tables by, because its 
+	possible to get wildly different answers. 

@@ -1,0 +1,25 @@
+SQL ARITHMETIC
+
+- Revenue = Price of product * number of products sold
+
+*** You can do basic arithmetic in SQL (addition, subtraction, etc...)
+
+- You can nickname columns in the SELECT clause using the "as" keyword. 
+	syntax: [column name] as "[new column name]" 
+	Remember, these column names are nicknames so you can't use them
+	for arithmetic. 
+	
+- You can multiply two columns' elements together with the "*" sign.
+	- Each element in one column with its corresponding element 
+	in another column. 
+	
+- The SUM() function adds up and returns all the elements in a
+	column. You can group the sum by using GROUP BY. For example, 
+	lets say I have a column which represents how much money a 
+	trio of brothers spent at the casino. I could add up that 
+	money using SUM(), then use GROUP BY to group the money by 
+	brother and see which brother spent the most money. 
+	
+- Remember, count() returns the number of elements in a column, SUM() adds them 
+	all up. 
+	
